@@ -308,7 +308,7 @@ def main():
             st.image(image, caption="Uploaded Image", use_column_width=True)
             
             # Predict button
-            if st.button("🔍 Recognize Face", type="primary", use_column_width=True):
+            if st.button("🔍 Recognize Face", type="primary", use_container_width=True):
                 with st.spinner("🔄 Processing..."):
                     result = detect_and_predict(
                         image, model, detector, class_names,
