@@ -1,11 +1,10 @@
 streamlit
-tensorflow==2.12.0
+numpy
 opencv-python-headless
+pillow
+tensorflow
 mtcnn
 keras-vggface
-keras_applications
-Pillow
-numpy
-huggingface_hub
 matplotlib
 seaborn
+huggingface-hub
