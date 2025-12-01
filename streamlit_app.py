@@ -305,10 +305,10 @@ def main():
         if uploaded_file is not None:
             # Display uploaded image
             image = Image.open(uploaded_file)
-            st.image(image, caption="Uploaded Image", use_container_width=True)
+            st.image(image, caption="Uploaded Image", use_column_width=True)
             
             # Predict button
-            if st.button("🔍 Recognize Face", type="primary", use_container_width=True):
+            if st.button("🔍 Recognize Face", type="primary", use_column_width=True):
                 with st.spinner("🔄 Processing..."):
                     result = detect_and_predict(
                         image, model, detector, class_names,
@@ -373,7 +373,7 @@ def main():
                     result['confidence'],
                     color
                 )
-                st.image(img_with_box, caption="Face Detection", use_container_width=True)
+                st.image(img_with_box, caption="Face Detection", use_column_width=True)
                 
                 # Top 5 predictions
                 st.markdown("#### 📈 Top 5 Predictions")
