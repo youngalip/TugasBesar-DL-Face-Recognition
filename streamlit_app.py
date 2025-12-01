@@ -73,22 +73,18 @@ st.markdown("""
 # ===========================
 @st.cache_resource
 def load_models():
-    """Load VGGFace model, MTCNN detector, and class names"""
     try:
-        # Load VGGFace model
-        model = tf.keras.models.load_model("vgg_model.h5")
-        
-        # Load class names
-        class_names = np.load("class_names.npy", allow_pickle=True)
-        
-        # Initialize MTCNN
-        detector = MTCNN()
-        
-        # Load config
-        with open("vgg_config.json", "r") as f:
+        model = tf.keras.models.load_model("models/vgg_model.h5", compile=False)
+
+        class_names = np.load("models/class_names.npy", allow_pickle=True)
+
+        with open("models/vgg_config.json", "r") as f:
             config = json.load(f)
-        
+
+        detector = MTCNN()
+
         return model, detector, class_names, config
+
     except Exception as e:
         st.error(f"❌ Error loading models: {str(e)}")
         st.stop()
