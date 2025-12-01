@@ -4,7 +4,7 @@ numpy==1.23.5
 Pillow==10.2.0
 opencv-python-headless==4.8.0.74
 mtcnn==0.1.1
-keras_vggface==0.6
+
 keras_applications==1.0.8
 h5py
 huggingface_hub==0.20.2
