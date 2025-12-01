@@ -1,0 +1,7 @@
+streamlit
+tensorflow==2.12.0
+keras-vggface
+mtcnn
+opencv-python
+numpy
+huggingface_hub
