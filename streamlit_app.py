@@ -4,9 +4,7 @@ import cv2
 from PIL import Image
 import tensorflow as tf
 from mtcnn import MTCNN
-from keras_vggface_fix.utils import preprocess_input
-from keras_vggface_fix.vggface import VGGFace
-
+from keras_vggface.utils import preprocess_input
 import json
 import matplotlib.pyplot as plt
 import seaborn as sns
